@@ -1,0 +1,220 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+    <div id="container-map" class="col p-0">
+        <div id="mapid"></div>
+
+
+        <div class="collapsible">
+            <div id="idDivContPIGPSInf">
+
+                <div id="nombreUnidadGpsDiv">
+                    <span id="nombreUnidadGps"></span>
+                </div>
+
+                <div id="idDivContPIGPSInfDir">
+                    <span id="lblUbicacionActualdirCompletaPanel"></span>
+                </div>
+            </div>
+            <div id="btnCerrarPanelGPSeIndicadores">
+
+                <span>&rsaquo;</span>
+
+            </div>
+
+            @*<div id="idDivStreeViewPanelInfoPanorama" style="width:244.05px; height:85.5%; border-right:1px solid white; float:left; box-sizing:border-box; border-bottom: 1px solid #fff;background-color: rgba(0, 51, 102, .4);">
+            <div style="cursor:pointer;margin-top:50px;text-align:center;font-size:16px; color:rgb(0, 51, 102); font-family:Trebuchet MS;">
+                La vista de calle esta desactivada.
+                <div id="btnActivaSVPanelInferior" style="width:244.05px;text-align:center;float: left;vertical-align: middle;box-sizing: border-box;">
+                    <span style="color:blue; text-decoration: underline; font-weight:bold; display: block; line-height:13px">Para ver StreetView, click aqui</span>
+                </div>
+            </div>
+        </div>*@
+            <div class="separador_panel">
+
+                <span>Posici&oacute;n</span>
+
+            </div>
+            <div class="div_panel">
+                <div class="div_container_3panel" id="idContenedorInferiorDireccionGPSPanel">
+                    <div title="Dirección" class="div-icon">
+                        <img src="images/InfoPanel/direccion.svg" style="width:48%; margin-top:10%;">
+                    </div>
+                    <div class="div_lbl_3panel">
+                        <span id="lblDireccionPanel" class="lbl_panel">Oeste</span>
+                    </div>
+                </div>
+                <div class="div_container_3panel" id="idContenedorInferiorInfoGPSPanel">
+                    <div title="Posición" id="idContSupLineaAzulInfoGPSPosicionPanel" class="div-icon" >
+                        <img id="idContSupLineaAzulInfoGPSPosicionPanelImg" src="images/InfoPanel/GSM.svg" style="width:48%; margin-top:10%;">
+                    </div>
+
+                    <div class="div_lbl_3panel">
+
+                        <span id="lblPosicionPanel" class="lbl_panel"></span>
+                    </div>
+                </div>
+
+                <div class="div_container_3panel" id="idContenedorUltimaComunicacionPanel">
+                    <div title="Última comunicación" id="idContSupLineaAzulUltimaComunicacionPanel" class="div-icon">
+                        <img id="idContSupLineaAzulUltimaComunicacionPanelImg" src="images/InfoPanel/ultima.svg" style="width:48%; margin-top:10%;">
+                    </div>
+                    <div class="div_lbl_3panel">
+                        <span id="lblUConexionPanel" class="lbl_panel"></span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="separador_panel">
+
+                <span>Cluster</span>
+
+            </div>
+            <div class="div_panel">
+                <div class="div_container_4panel" >
+                    <div title="Velocidad" class="div-icon">
+                        <img src="images/InfoPanel/velocidad.svg" style="width:48%; margin-top:0%;">
+                    </div>
+                    <div class="div_lbl_4panel">
+                        <span id="lblVelocidadPanel" class="lbl_panel"></span>
+                    </div>
+                </div>
+
+                <div class="div_container_4panel">
+                    <div title="Ignition" class="div-icon">
+                        <img src="~/images/InfoPanel/ignition.svg" style="width:48%; margin-top:0%;">
+                    </div>
+                    <div class="div_lbl_4panel">
+                        <span id="lblignition" class="lbl_panel
+                              ">Encendida</span>
+                    </div>
+                </div>
+
+                <div class="div_container_4panel">
+                    <div title="Odometro" class="div-icon">
+                        <img src="~/images/InfoPanel/odometer.svg" style="width:48%; margin-top:0%;">
+                    </div>
+                    <div class="div_lbl_4panel">
+                        <span id="lblOdoPanel" class="lbl_panel">0km</span>
+                    </div>
+                </div>
+                <div id="idContenedorInferiorIzqInfoGPSFechaHoraPanel" class="div_container_4panel">
+                    <div title="Combustible" class="div-icon">
+                        <img src="~/images/InfoPanel/estacion.svg" style="width: 48%; margin-top: 0%;">
+                    </div>
+
+                    <div class="div_lbl_4panel">
+                        <span id="lblCombustible" class="lbl_panel">No Disponible</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="separador_panel">
+
+                <span>Localizador</span>
+
+            </div>
+            <div class="div_panel">
+                <div class="div_container_3panel" id="idContenedorInferiorDireccionGPSPanel">
+                    <div title="Proveedor Servicio" class="div-icon">
+                        <img src="~/images/InfoPanel/proveedor.svg" style="width:48%; margin-top:10%;">
+                    </div>
+                    <div  class="div_lbl_3panel">
+                        <span id="lblProvPanel" class="lbl_panel">No Disponible</span>
+                    </div>
+                </div>
+                <div class="div_container_3panel" id="idContenedorInferiorInfoGPSPanel">
+                    <div title="Device Id" id="idContSupLineaAzulInfoGPSPosicionPanel" class="div-icon">
+                        <img id="idContSupLineaAzulInfoGPSPosicionPanelImg" src="images/InfoPanel/device.svg" style="width:48%; margin-top:10%;">
+                    </div>
+
+                    <div  class="div_lbl_3panel">
+
+                        <span id="lblDevicePanel" class="lbl_panel">#00#00#00#</span>
+                    </div>
+                </div>
+
+                <div class="div_container_3panel" id="idContenedorUltimaComunicacionPanel">
+                    <div title="Tipo Unidad" id="idContSupLineaAzulUltimaComunicacionPanel" class="div-icon">
+                        <img id="idContSupLineaAzulUltimaComunicacionPanelImg" src="~/images/InfoPanel/transport.svg" style="width:48%; margin-top:10%;">
+                    </div>
+                    <div  class="div_lbl_3panel">
+                        <span id="lblTruckPanel" class="lbl_panel">TRACTOR</span>
+                    </div>
+                </div>
+
+                @*<div id="idContenedorTeaActivanPanel" style="height:25%; width:100%; text-align:center; line-height:21px;border-bottom:1px solid white;  box-sizing:border-box; display:none;">
+                <div title="Última comunicación" id="idContSupLineaAzulTeaPanel" style="background-color:#003366; width:30%; height:100%; float:left;">
+                    <img id="idContSupLineaAzulTeaPanelImg" src="images/InfoPanel/ultima.svg" style="width:48%; margin-top:10%;">
+                </div>
+
+                <div id="lblTeaActiva" style="cursor:pointer; height:100%; width:70%; text-align:center; line-height:33px; float:left;"></div>
+            </div>*@
+            </div>
+
+            <div id="idDivContPIGPSInf">
+
+                <div id="nombreUnidadGpsDiv">
+                    <span id="nombreUnidadGps"></span>
+                </div>
+
+                <div id="idDivContPIGPSInfDir">
+                    <span id="lblUbicacionActualdirCompletaPanel"></span>
+                </div>
+
+                @*<div style="height:100%;width: 60px;background-color: #e1e7ed;text-align:center;vertical-align: middle;float: left;box-sizing: border-box;padding-left: 10px; overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">
+                <img id="imgPuertoOut1PanelImg__Copy" src="images/LedsIndicadores/news/copy.svg" title="Copiar datos del móvil" style="height:60%; margin-top:0%; cursor:pointer">
+
+            </div>*@
+
+            </div>
+
+            @*</div>*@
+
+
+
+
+
+            @*<button>&raquo;</button>*@
+
+
+        </div>
+        </div>
+
+
+<!--===============================================================================================-->
+<script src="~/vendor/jquery/jquery-3.2.1.min.js"></script>
+
+<script src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/animejs/1.1.3/anime.min.js"></script>
+<!--===============================================================================================-->
+<script src="~/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+<script src="~/vendor/bootstrap/js/popper.js"></script>
+<script src="~/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+<script src="~/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+<script src="~/vendor/daterangepicker/moment.min.js"></script>
+<script src="~/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+<script src="~/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+@*<script src="../leaflet-mapbox-gl.js"></script>*@
+
+@*<script src="https://maps.google.com/maps/api/js"></script>*@
+
+<script src="https://maps.google.com/maps/api/js?sensor=true&key=AIzaSyAu8FCWtwtqhTLBtFD-h_vUgyAQ3_E3PXA"></script>
+
+@*<script type="text / javascript" src="~/js/gmaps/gmaps.min.js"> </script>*@
+@*<script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.9/gmaps.min.js"></script>*@
+
+
+
+
+
+
+<script src="~/js/site.js"></script>
